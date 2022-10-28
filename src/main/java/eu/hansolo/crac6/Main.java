@@ -33,6 +33,7 @@ public class Main implements Resource {
 
     // ******************** Constructor ***************************************
     public Main() {
+        Core.getGlobalContext().register(Main.this);
         final long start = System.nanoTime();
         for (int i = 1 ; i < 50_000 ; i++) {
             isPrime(i);
